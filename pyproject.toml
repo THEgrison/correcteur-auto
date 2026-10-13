@@ -1,0 +1,28 @@
+[project]
+name = "correcteur-auto"
+version = "1.0.0"
+description = "Correction orthographe FR/EN pour Linux (XFCE/X11) via icône systray et IA locale Ollama"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "THEgrison" }]
+keywords = ["spellcheck", "ollama", "linux", "xfce", "systray", "french"]
+dependencies = [
+  "pynput>=1.7.7",
+  "pystray>=0.19.5",
+  "Pillow>=10.0.0",
+]
+
+[project.scripts]
+correcteur-auto = "correcteur.app:main"
+
+[project.urls]
+Homepage = "https://github.com/THEgrison/correcteur-auto"
+Repository = "https://github.com/THEgrison/correcteur-auto"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["correcteur*"]
